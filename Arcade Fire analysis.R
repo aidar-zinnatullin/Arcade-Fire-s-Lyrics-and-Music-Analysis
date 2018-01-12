@@ -1,4 +1,4 @@
-### Coldplay's saddest song
+### Arcade Fire
 
 # Firstly, Let's download all necessary packages.
 library(tidyverse)
@@ -16,11 +16,11 @@ library(highcharter)
 
 
 # Then you need to create client_id and client_secret from https://developer.spotify.com/web-api/. 
-client_id <- '2932076b24054b5e8e5f3645f07cdbd3'
-client_secret <- 'c650b91149054f0a82bc90d56da08888'
+client_id <- 'XXXXXXXXXXX'
+client_secret <- 'XXXXXXXXXXXXXXX'
 
-Sys.setenv(SPOTIFY_CLIENT_ID = '2932076b24054b5e8e5f3645f07cdbd3')
-Sys.setenv(SPOTIFY_CLIENT_SECRET = 'c650b91149054f0a82bc90d56da08888')
+Sys.setenv(SPOTIFY_CLIENT_ID = 'XXXXXXXXXXXXXXXXXX')
+Sys.setenv(SPOTIFY_CLIENT_SECRET = 'XXXXXXXXXXXXXXXXXXX')
 
 spotify_df <- get_artist_audio_features('Arcade Fire')
 
@@ -29,7 +29,7 @@ str(spotify_df)
 non_studio_albums <- c('Ghost Stories Live 2014', 'A Head Full Of Dreams Tour Edition', 'Viva La Vida - Prospekts March Edition', 'A Head Full Of Dreams Tour Edition')
 spotify_df <- filter(spotify_df, !album_name %in% non_studio_albums)
 
-token <- '_0aNyxb3dlCDQxjWirQtdHqeHd1Fe2pG1XYP-DMBCHt4HmYfKgS-6kYI9TRyJ0sB'
+token <- 'XXXXXXXXXXXXXXXXXXXXXXX'
 genius_get_artists <- function(artist_name, n_results = 10) {
   baseURL <- 'https://api.genius.com/search?q=' 
   requestURL <- paste0(baseURL, gsub(' ', '%20', artist_name),
